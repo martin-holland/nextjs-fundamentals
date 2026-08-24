@@ -1,0 +1,36 @@
+.page {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+.title {
+  font-size: 2.5rem;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: #7dd3fc;
+  margin: 0 0 1rem;
+}
+
+.intro {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #cbd5e1;
+  margin: 0 0 2rem;
+}
+
+.link {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border: 1px solid #7dd3fc;
+  border-radius: 999px;
+  color: #7dd3fc;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.link:hover {
+  background: #7dd3fc;
+  color: #0a0a0a;
+}
