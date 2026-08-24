@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -62,6 +63,9 @@ export default function Home() {
           >
             Documentation
           </a>
+          <Link className={styles.secondary} href="/about">
+            Go to About Page
+          </Link>
         </div>
       </main>
     </div>
