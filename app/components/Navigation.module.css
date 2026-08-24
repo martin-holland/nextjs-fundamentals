@@ -1,0 +1,19 @@
+.nav {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #1e293b;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+.link {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.link:hover {
+  color: #7dd3fc;
+  text-decoration: underline;
+}
