@@ -5,6 +5,8 @@ Metropolia, *Fundamentals of Next.js (3 ects, nonstop)*, section **Next.js Basic
 Built with [`create-next-app`](https://nextjs.org/docs/app/getting-started/installation)
 (Next.js 16, App Router, JavaScript, ESLint, CSS Modules).
 
+**Live demo:** https://nextjs-fundamentals-psi.vercel.app
+
 ## Task progression
 
 Each task in the course is one commit, in order:
