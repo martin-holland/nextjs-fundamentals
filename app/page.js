@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Alert from "./components/Alert";
 import AppLayout from "./components/AppLayout";
 import Button from "./components/Button";
 import Card from "./components/Card";
@@ -32,6 +33,7 @@ export default function Home() {
           <Card backgroundColor="#4c1d95" title="Same component, different prop">
             Passing a different value changes the style without any CSS file.
           </Card>
+          <Alert>This alert is styled entirely with Tailwind classes.</Alert>
         </AppLayout>
       </main>
     </>
