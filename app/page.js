@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Navigation from "./components/Navigation";
+import Title from "./components/Title";
 import styles from "./home/home.module.css";
 
 export default function Home() {
@@ -7,7 +8,7 @@ export default function Home() {
     <>
       <Navigation />
       <main className={styles.page}>
-        <h1 className={styles.title}>Martin&apos;s Next.js Playground</h1>
+        <Title>Martin&apos;s Next.js Playground</Title>
         <p className={styles.intro}>
           This small site is my coursework for Fundamentals of Next.js at
           Metropolia. It is built with the App Router, and each page here
