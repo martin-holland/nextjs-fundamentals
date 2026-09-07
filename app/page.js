@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Button from "./components/Button";
+import Card from "./components/Card";
 import Navigation from "./components/Navigation";
 import Title from "./components/Title";
 import styles from "./home/home.module.css";
@@ -22,6 +23,12 @@ export default function Home() {
         <p>
           <Button>Hover over me</Button>
         </p>
+        <Card backgroundColor="#1e3a8a" title="Inline styles">
+          This card gets its background colour from a prop.
+        </Card>
+        <Card backgroundColor="#4c1d95" title="Same component, different prop">
+          Passing a different value changes the style without any CSS file.
+        </Card>
       </main>
     </>
   );
