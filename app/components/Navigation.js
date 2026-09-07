@@ -13,6 +13,9 @@ export default function Navigation() {
       <Link className={styles.link} href="/blog/post">
         Blog Post
       </Link>
+      <Link className={styles.link} href="/contact">
+        Contact
+      </Link>
     </nav>
   );
 }
