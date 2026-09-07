@@ -1,0 +1,32 @@
+/* Global styles for the whole app, imported in app/layout.js.
+   Loaded after app/globals.css, so these values win. */
+
+:root {
+  --accent: #7dd3fc;
+  --surface: #111827;
+  --muted: #cbd5e1;
+}
+
+body {
+  font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  background: #0b1120;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--accent);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+::selection {
+  background: var(--accent);
+  color: #0a0a0a;
+}
