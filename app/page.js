@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Button from "./components/Button";
 import Navigation from "./components/Navigation";
 import Title from "./components/Title";
 import styles from "./home/home.module.css";
@@ -18,6 +19,9 @@ export default function Home() {
         <Link className={styles.link} href="/about">
           Go to About Page
         </Link>
+        <p>
+          <Button>Hover over me</Button>
+        </p>
       </main>
     </>
   );
