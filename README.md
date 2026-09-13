@@ -1,7 +1,7 @@
 # Fundamentals of Next.js — coursework
 
 Metropolia, *Fundamentals of Next.js (3 ects, nonstop)* — sections
-**Next.js Basics** and **Styling in Next.js**.
+**Next.js Basics**, **Styling in Next.js** and **API Routes in Next.js**.
 
 Built with [`create-next-app`](https://nextjs.org/docs/app/getting-started/installation)
 (Next.js 16, App Router, JavaScript, ESLint, CSS Modules).
@@ -36,6 +36,18 @@ Each task in the course is one commit, in order.
 | 6 | Tailwind setup & `Alert` | [`014d059`](https://github.com/martin-holland/nextjs-fundamentals/commit/014d0593d7c12e338acb255badb474c3c75a0fcc) |
 | 7 | `ProfileCard` combining styles | [`d527037`](https://github.com/martin-holland/nextjs-fundamentals/commit/d5270372c631f8be6c43f7ef3dbc7c1bda3a3190) |
 
+### API Routes in Next.js
+
+| Task | Description | Commit |
+| ---- | ----------- | ------ |
+| 1 | `GET /api/profile` | [`73b7f96`](https://github.com/martin-holland/nextjs-fundamentals/commit/73b7f96e081929d9e6aecf1d53ca7880e7cdea16) |
+| 2 | Dynamic `GET /api/product/[id]` | [`19297a0`](https://github.com/martin-holland/nextjs-fundamentals/commit/19297a095b10f6096d7f3e84e4b4c5fd230c0eea) |
+| 3 | `POST /api/contact` | [`6a904ac`](https://github.com/martin-holland/nextjs-fundamentals/commit/6a904ac8d76d492bd058f5b937d9dd188d895538) |
+| 4 | Contact field validation (400) | [`48338ce`](https://github.com/martin-holland/nextjs-fundamentals/commit/48338ce6344a0ee549ecb13b4ab5130f302ec7a3) |
+| 5 | Status codes (201 / 400 / 401) | [`53265be`](https://github.com/martin-holland/nextjs-fundamentals/commit/53265beb1dafbe9c03253883016ea7a2e5257fe9) |
+| 6 | Contact form frontend integration | [`4566578`](https://github.com/martin-holland/nextjs-fundamentals/commit/4566578c877ec83eaa170ee636a6fcb0197c6e96) |
+| 7 | In-memory user manager API | [`b5b1a2b`](https://github.com/martin-holland/nextjs-fundamentals/commit/b5b1a2b6418bee2e83ca466363061dc4b6ab2782) |
+
 ## Routes
 
 | Route | File |
@@ -43,6 +55,17 @@ Each task in the course is one commit, in order.
 | `/` | `app/page.js` |
 | `/about` | `app/about/page.js` |
 | `/blog/post` | `app/blog/post/page.js` |
+| `/contact` | `app/contact/page.js` |
+
+### API endpoints
+
+| Method | Route | File |
+| ------ | ----- | ---- |
+| GET | `/api/profile` | `app/api/profile/route.js` |
+| GET | `/api/product/[id]` | `app/api/product/[id]/route.js` |
+| POST | `/api/contact` | `app/api/contact/route.js` |
+| GET, POST | `/api/users` | `app/api/users/route.js` |
+| GET | `/api/users/[id]` | `app/api/users/[id]/route.js` |
 
 Shared component: `app/components/Navigation.js`.
 Styles: `app/home/home.module.css`, `app/components/Navigation.module.css`.
