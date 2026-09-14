@@ -35,7 +35,12 @@ export default function Home() {
             Passing a different value changes the style without any CSS file.
           </Card>
           <Alert>This alert is styled entirely with Tailwind classes.</Alert>
-          <ProfileCard name="Martin Holland" role="Student" accent="#7dd3fc" />
+          <ProfileCard
+            name="Martin Holland"
+            role="Student"
+            accent="#7dd3fc"
+            avatar="/avatar.jpg"
+          />
           <ProfileCard name="Ada Lovelace" role="Guest lecturer" accent="#f472b6" />
         </AppLayout>
       </main>
