@@ -2,7 +2,7 @@
 
 Metropolia, *Fundamentals of Next.js (3 ects, nonstop)* — sections
 **Next.js Basics**, **Styling in Next.js**, **API Routes in Next.js** and
-**SSR and SSG**.
+**SSR and SSG** and **Testing in Next.js**.
 
 Built with [`create-next-app`](https://nextjs.org/docs/app/getting-started/installation)
 (Next.js 16, App Router, JavaScript, ESLint, CSS Modules).
@@ -60,6 +60,23 @@ Each task in the course is one commit, in order.
 | 5 | Test ISR (`revalidate = 10`) | [`7b23e52`](https://github.com/martin-holland/nextjs-fundamentals/commit/7b23e522d5e1e35d0a56f7ee71fa46715249b1fd) |
 | 6 | Hybrid rendering (`/hybrid`) | [`77eea91`](https://github.com/martin-holland/nextjs-fundamentals/commit/77eea912080cb7aff50f4a95503f4a0bf5ecc118) |
 
+### Testing in Next.js
+
+| Task | Description | Commit |
+| ---- | ----------- | ------ |
+| 1 | Set up Jest with Next.js | [`7df3ba1`](https://github.com/martin-holland/nextjs-fundamentals/commit/7df3ba13a016cf9b5a14da8df43dad13cbc59596) |
+| 2 | Unit test a utility function | [`aeb6c51`](https://github.com/martin-holland/nextjs-fundamentals/commit/aeb6c5131748d9ada586bebdf22d5a9ecc14f968) |
+| 3 | Component test with RTL (`<Greeting />`) | [`6c9a32b`](https://github.com/martin-holland/nextjs-fundamentals/commit/6c9a32b9c8ebde9a6cb43b38c18cd4f468ef9605) |
+| 4 | Test the home page rendering | [`1517310`](https://github.com/martin-holland/nextjs-fundamentals/commit/1517310347f37bc73791ea06f256c47fb8932137) |
+| 5 | Test an API route (`/api/hello`) | [`d39fdbf`](https://github.com/martin-holland/nextjs-fundamentals/commit/d39fdbf4aed0a3ffb1b641c2f4833813756ec8c2) |
+| 6 | Mock external data in a test | [`2e7d49d`](https://github.com/martin-holland/nextjs-fundamentals/commit/2e7d49d488de8f0cbee38ffae9e035f4014f989a) |
+| 7 | End-to-end test with Playwright | [`95cd8c5`](https://github.com/martin-holland/nextjs-fundamentals/commit/95cd8c5b0ac877069627945dbca4d7eda43f7034) |
+
+```bash
+npm test          # Jest: unit + component tests
+npm run test:e2e  # Playwright: end-to-end
+```
+
 ## Routes
 
 | Route | File |
@@ -81,6 +98,7 @@ Each task in the course is one commit, in order.
 | POST | `/api/contact` | `app/api/contact/route.js` |
 | GET, POST | `/api/users` | `app/api/users/route.js` |
 | GET | `/api/users/[id]` | `app/api/users/[id]/route.js` |
+| GET, POST | `/api/hello` | `app/api/hello/route.js` |
 
 Shared component: `app/components/Navigation.js`.
 Styles: `app/home/home.module.css`, `app/components/Navigation.module.css`.
