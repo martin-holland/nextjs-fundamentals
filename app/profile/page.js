@@ -13,6 +13,10 @@ async function getUser() {
 }
 
 export default async function ProfilePage() {
+  // Task 4: this runs on the server, so it appears in the `next dev` terminal
+  // and never in the browser console.
+  console.log("Rendering profile on server", new Date().toISOString());
+
   const user = await getUser();
   const renderedAt = new Date().toLocaleTimeString("en-GB", {
     timeZone: "Europe/Helsinki",
