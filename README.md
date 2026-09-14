@@ -2,7 +2,8 @@
 
 Metropolia, *Fundamentals of Next.js (3 ects, nonstop)* — sections
 **Next.js Basics**, **Styling in Next.js**, **API Routes in Next.js** and
-**SSR and SSG** and **Testing in Next.js**.
+**SSR and SSG**, **Testing in Next.js**,
+**Deployment & Optimization** and the **Theme Toggle App**.
 
 Built with [`create-next-app`](https://nextjs.org/docs/app/getting-started/installation)
 (Next.js 16, App Router, JavaScript, ESLint, CSS Modules).
@@ -77,6 +78,20 @@ npm test          # Jest: unit + component tests
 npm run test:e2e  # Playwright: end-to-end
 ```
 
+### Deployment & Optimization
+
+| Task | Description | Commit |
+| ---- | ----------- | ------ |
+| 1 | Deploy to Vercel via the GitHub integration | *(the whole history — every push auto-deploys)* |
+| 2 | Optimize images with `<Image />` | [`583e44b`](https://github.com/martin-holland/nextjs-fundamentals/commit/583e44b2a39f67ec2435748440d112ef8f05d735) |
+| 3 | Third-party script with `<Script />` | [`3946067`](https://github.com/martin-holland/nextjs-fundamentals/commit/3946067b5526aa4ff3cbef72cb8a72adf3a54014) |
+
+### Theme Toggle App
+
+| Description | Commit |
+| ----------- | ------ |
+| Shared theme via Context API, `useTheme()` across two pages | [`3a423ab`](https://github.com/martin-holland/nextjs-fundamentals/commit/3a423ab422f75be7aa9d0466dfec41aa02ea2af9) |
+
 ## Routes
 
 | Route | File |
@@ -88,6 +103,8 @@ npm run test:e2e  # Playwright: end-to-end
 | `/blog` | `app/blog/page.js` (ISR, revalidate 10s) |
 | `/profile` | `app/profile/page.js` (SSR, no-store) |
 | `/hybrid` | `app/hybrid/page.js` (cached + dynamic) |
+| `/theme` | `app/theme/page.js` (Context API) |
+| `/theme/settings` | `app/theme/settings/page.js` |
 
 ### API endpoints
 
