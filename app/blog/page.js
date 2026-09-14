@@ -14,13 +14,18 @@ async function getPosts() {
     next: { revalidate: 10 },
   });
   if (!res.ok) throw new Error(`Failed to load posts: ${res.status}`);
-  return res.json();
+  const posts = await res.json();
+
+  // Rotate which posts are shown so a regenerated page is visibly different
+  // from the cached one. Done here in the data function rather than during
+  // render, and derived from the clock rather than Math.random, so the
+  // component stays pure.
+  const offset = Math.floor(Date.now() / 10000) % posts.length;
+  return [...posts.slice(offset), ...posts.slice(0, offset)].slice(0, 5);
 }
 
 export default async function BlogPage() {
-  const allPosts = await getPosts();
-  // Shuffle so a regenerated page is visibly different from the cached one.
-  const posts = [...allPosts].sort(() => Math.random() - 0.5).slice(0, 5);
+  const posts = await getPosts();
   const renderedAt = new Date().toLocaleString("en-GB", {
     timeZone: "Europe/Helsinki",
   });
