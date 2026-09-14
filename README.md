@@ -1,7 +1,8 @@
 # Fundamentals of Next.js — coursework
 
 Metropolia, *Fundamentals of Next.js (3 ects, nonstop)* — sections
-**Next.js Basics**, **Styling in Next.js** and **API Routes in Next.js**.
+**Next.js Basics**, **Styling in Next.js**, **API Routes in Next.js** and
+**SSR and SSG**.
 
 Built with [`create-next-app`](https://nextjs.org/docs/app/getting-started/installation)
 (Next.js 16, App Router, JavaScript, ESLint, CSS Modules).
@@ -48,6 +49,17 @@ Each task in the course is one commit, in order.
 | 6 | Contact form frontend integration | [`4566578`](https://github.com/martin-holland/nextjs-fundamentals/commit/4566578c877ec83eaa170ee636a6fcb0197c6e96) |
 | 7 | In-memory user manager API | [`b5b1a2b`](https://github.com/martin-holland/nextjs-fundamentals/commit/b5b1a2b6418bee2e83ca466363061dc4b6ab2782) |
 
+### SSR and SSG
+
+| Task | Description | Commit |
+| ---- | ----------- | ------ |
+| 1 | Build-time blog page (`/blog`) | [`0277b65`](https://github.com/martin-holland/nextjs-fundamentals/commit/0277b65d08549c56389b47835b9735582d9315f0) |
+| 2 | Timestamp + ISR `revalidate` | [`f37bfa5`](https://github.com/martin-holland/nextjs-fundamentals/commit/f37bfa509c6cdbc24fea246fe057e764375f26f4) |
+| 3 | Server-rendered profile (`/profile`) | [`83e1e09`](https://github.com/martin-holland/nextjs-fundamentals/commit/83e1e093d1329bb56feff05c797e08b18b12d4ca) |
+| 4 | Observe SSR logs in the terminal | [`6d045e9`](https://github.com/martin-holland/nextjs-fundamentals/commit/6d045e9a45145a404a8088fd6aecfe58075c6af9) |
+| 5 | Test ISR (`revalidate = 10`) | [`7b23e52`](https://github.com/martin-holland/nextjs-fundamentals/commit/7b23e522d5e1e35d0a56f7ee71fa46715249b1fd) |
+| 6 | Hybrid rendering (`/hybrid`) | [`77eea91`](https://github.com/martin-holland/nextjs-fundamentals/commit/77eea912080cb7aff50f4a95503f4a0bf5ecc118) |
+
 ## Routes
 
 | Route | File |
@@ -56,6 +68,9 @@ Each task in the course is one commit, in order.
 | `/about` | `app/about/page.js` |
 | `/blog/post` | `app/blog/post/page.js` |
 | `/contact` | `app/contact/page.js` |
+| `/blog` | `app/blog/page.js` (ISR, revalidate 10s) |
+| `/profile` | `app/profile/page.js` (SSR, no-store) |
+| `/hybrid` | `app/hybrid/page.js` (cached + dynamic) |
 
 ### API endpoints
 
