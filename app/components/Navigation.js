@@ -16,6 +16,9 @@ export default function Navigation() {
       <Link className={styles.link} href="/contact">
         Contact
       </Link>
+      <Link className={styles.link} href="/theme">
+        Theme
+      </Link>
     </nav>
   );
 }
