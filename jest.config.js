@@ -12,6 +12,8 @@ const config = {
   // Watchman times out on this machine; the node crawler is fine for a
   // project this size and avoids a noisy warning on every run.
   watchman: false,
+  // Playwright specs live in e2e/ and are run by Playwright, not Jest.
+  testPathIgnorePatterns: ["<rootDir>/e2e/", "<rootDir>/.next/"],
   setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
 };
 
